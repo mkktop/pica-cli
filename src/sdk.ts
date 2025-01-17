@@ -214,7 +214,7 @@ export class Pica {
             const res = await this.pictures(bookId, ep.order, i)
             pictures.push(...res.docs)
         }
-        const len = String(pictures.length).length
+        const len = 3
         pictures.forEach((pic, i) => {
             pic.epTitle = ep.title
             pic.name = String(i + 1).padStart(len, '0') + path.extname(pic.name)
